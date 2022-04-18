@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Winter</title>
+        <link rel="manifest" href="./manifest.webmanifest">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue@3"></script>
+
+    </head>
+        
+
+
+    <body>
+
+        <div id="app">
+            <img v-bind:src="picture" alt="" />
+            <h1>Geld in Bierkisten</h1>
+            <p>Umrechnung deines Geldes in Bierkisten</p>
+            <br>
+            <input v-model="Eingabe">
+            <br>
+            <button v-on:click="BerechnungPreis">Berechnen!</button>
+            <br>
+            <p>Anbieter:</p> 
+            <br>     
+            <br>
+
+
+            <button v-on:click="ZeigePuntigamer"><span v-show="Rechner">Puntigamer</span></button>
+            <p1 v-show="Puntigamer">{{AusgabeP}}</p1>
+            <br>
+            <button v-on:click="ZeigeMurauer"><span v-show="Rechner">Murauer</span></button>
+            <p1 v-show="Murauer">{{AusgabeM}}</p1>
+            <br>
+            <button v-on:click="ZeigeWieselburger"><span v-show="Rechner">Wieselburger</span></button>
+            <p1 v-show="Wieselburger">{{AusgabeW}}</p1>
+            <br>
+            <button v-on:click="ZeigeZwettler"><span v-show="Rechner">Zwettler</span></button>
+            <p1 v-show="Zwettler">{{AusgabeZ}}</p1>
+            <br>
+            <button v-on:click="ZeigeGoesser"><span v-show="Rechner">Goesser</span></button>
+            <p1 v-show="Goesser">{{AusgabeG}}</p1>
+            <br>
+  
+
+
+            </div>
+            
+
+
+
+        </div>
+
+
+        <script src="app.js"></script>
+
+
+
+    </body>
+
+
+
+
+
+
+</html>
