@@ -1,3 +1,12 @@
+if('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker
+            .register('./sw.js')
+            .then(reg => console.log('Service Worker: Registered'))
+            .catch(err => console.log("Not Found"))
+    })
+}
+
 
 const app = Vue.createApp({
     data() {
@@ -21,42 +30,42 @@ const app = Vue.createApp({
     },
     methods: {
         BerechnungPreis(){
-            this.Ausgabe = this.Eingabe
-            this.Rechner = true
-            this.AusgabeP = this.Eingabe  / 23,05
-            this.AusgabeM = this.Eingabe  / 24,49
-            this.AusgabeW = this.Eingabe  / 24,07
-            this.AusgabeZ = this.Eingabe  / 24,00
-            this.AusgabeG = this.Eingabe  / 23,26 
+            this.Ausgabe = this.Eingabe;
+            this.Rechner = true;
+            this.AusgabeP = this.Eingabe  / 23,05;
+            this.AusgabeM = this.Eingabe  / 24,49;
+            this.AusgabeW = this.Eingabe  / 24,07;
+            this.AusgabeZ = this.Eingabe  / 24,00;
+            this.AusgabeG = this.Eingabe  / 23,26;
 
         },
         ZeigePuntigamer(){
             if(this.Rechner){
-                this.Puntigamer = !this.Puntigamer
+                this.Puntigamer = !this.Puntigamer;
             }
 
         },
         ZeigeMurauer(){
             if(this.Rechner){
-            this.Murauer = !this.Murauer
+            this.Murauer = !this.Murauer;
             }
 
         },
         ZeigeWieselburger(){
             if(this.Rechner){
-            this.Wieselburger = !this.Wieselburger
+            this.Wieselburger = !this.Wieselburger;
             }
 
         },
         ZeigeZwettler(){
             if(this.Rechner){
-            this.Zwettler = !this.Zwettler
+            this.Zwettler = !this.Zwettler;
             }
 
         },
         ZeigeGoesser(){
             if(this.Rechner){
-            this.Goesser = !this.Goesser
+            this.Goesser = !this.Goesser;
             }
 
         }
